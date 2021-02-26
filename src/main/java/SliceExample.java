@@ -62,7 +62,7 @@ public class SliceExample {
         for (SSAInstruction inst : ir.getInstructions()) {
             if (inst instanceof SSAAbstractInvokeInstruction) {
                 SSAAbstractInvokeInstruction call = (SSAAbstractInvokeInstruction) inst;
-                if (call.getDeclaredTarget().getName().toString().equals(methodName))
+                if (call.getCallSite().getDeclaredTarget().getName().toString().equals(methodName))
                     return new NormalStatement(cgNode, call.iIndex());
             }
         }

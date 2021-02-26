@@ -9,5 +9,6 @@ public class AnalysisTest {
         String inputFile = "./input/test.jar";
         File exclusionsFile = new File("./Exclusions.txt");
         AnalysisScope scope = AnalysisScopeReader.makeJavaBinaryAnalysisScope(inputFile, exclusionsFile);
+
     }
 }
